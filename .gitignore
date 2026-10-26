@@ -1,0 +1,6 @@
+# downloaded JDKs, Mojang files, worlds and build output (setup.sh recreates them)
+/work/
+# raw logs of local runs (contain absolute paths); publish summaries via tools/analyze.py instead
+/results/raw/
+*.class
+__pycache__/

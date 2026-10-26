@@ -1,0 +1,80 @@
+== 1.5.2-j8-intel (DRI_PRIME 0, Java 8) total 1.9 cores
+  Minecraft main     x1   88,3% of one core
+  C2 CompilerThre    x3   55,1% of one core
+  Server thread      x1   25,8% of one core
+  java:gdrv          x1    6,6% of one core
+  C1 CompilerThre    x1    5,9% of one core
+  File IO Thread     x1    2,8% of one core
+  GC task thread#    x8    0,3% of one core
+  AWT-XAWT           x1    0,2% of one core
+
+== 1.5.2-j21-intel (DRI_PRIME 0, Java 21) total 1.7 cores
+  Minecraft main     x1   90,5% of one core
+  C2 CompilerThre    x1   35,7% of one core
+  Server thread      x1   27,3% of one core
+  java:gdrv          x1    6,6% of one core
+  C1 CompilerThre    x1    3,9% of one core
+  File IO Thread     x1    2,4% of one core
+  GC Thread          x8    0,4% of one core
+  AWT-XAWT           x1    0,3% of one core
+
+== 1.5.2-j8-amd (DRI_PRIME 1, Java 8) total 2.0 cores
+  Minecraft main     x1   72,3% of one core
+  C2 CompilerThre    x3   60,0% of one core
+  Server thread      x1   26,0% of one core
+  java:gl            x1   22,2% of one core
+  C1 CompilerThre    x1    6,6% of one core
+  java:gdrv          x1    6,5% of one core
+  java:cs            x1    5,0% of one core
+  File IO Thread     x1    3,8% of one core
+
+== 1.5.2-j21-amd (DRI_PRIME 1, Java 21) total 1.8 cores
+  Minecraft main     x1   75,2% of one core
+  C2 CompilerThre    x1   33,4% of one core
+  Server thread      x1   24,7% of one core
+  java:gl            x1   24,1% of one core
+  java:gdrv          x1    7,6% of one core
+  java:cs            x1    6,2% of one core
+  C1 CompilerThre    x1    3,8% of one core
+  File IO Thread     x1    2,7% of one core
+
+== 1.8.9-j8-intel (DRI_PRIME 0, Java 8) total 2.7 cores
+  C2 CompilerThre    x3  118,3% of one core
+  Client thread      x1   86,4% of one core
+  Server thread      x1   29,7% of one core
+  java:gdrv          x1    9,7% of one core
+  C1 CompilerThre    x1    7,1% of one core
+  Chunk Batcher      x2    5,7% of one core
+  Thread             x3    5,1% of one core
+  File IO Thread     x1    3,1% of one core
+
+== 1.8.9-j21-intel (DRI_PRIME 0, Java 21) total 1.9 cores
+  Client thread      x1   87,9% of one core
+  C2 CompilerThre    x1   40,7% of one core
+  Server thread      x1   30,9% of one core
+  java:gdrv          x1    9,5% of one core
+  C1 CompilerThre    x1    5,8% of one core
+  Thread             x3    5,2% of one core
+  Chunk Batcher      x2    4,8% of one core
+  File IO Thread     x1    3,1% of one core
+
+== 1.8.9-j8-amd (DRI_PRIME 1, Java 8) total 2.9 cores
+  C2 CompilerThre    x3  121,0% of one core
+  Client thread      x1   71,2% of one core
+  Server thread      x1   33,4% of one core
+  java:gl            x1   19,6% of one core
+  java:gdrv          x1    9,5% of one core
+  C1 CompilerThre    x1    7,8% of one core
+  java:cs            x1    6,1% of one core
+  Chunk Batcher      x2    4,8% of one core
+
+== 1.8.9-j21-amd (DRI_PRIME 1, Java 21) total 2.2 cores
+  Client thread      x1   82,5% of one core
+  C2 CompilerThre    x1   43,5% of one core
+  Server thread      x1   30,0% of one core
+  java:gl            x1   21,6% of one core
+  java:gdrv          x1    8,9% of one core
+  java:cs            x1    7,1% of one core
+  C1 CompilerThre    x1    5,4% of one core
+  Chunk Batcher      x2    5,1% of one core
+

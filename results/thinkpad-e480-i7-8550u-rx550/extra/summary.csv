@@ -1,0 +1,19 @@
+series,version,gpu_prime,gpu_renderer,java,view,repeat,run,title_s,create_world_s,fps_first10,fps_avg_after10,fps_last30,fps_p5,chunk_updates_per_s,chunks_settled_s,max_heap_mb,amd_busy_pct,cpu_cores
+A-first-series,1.5.2,0,Mesa Intel(R) UHD Graphics 620 (KBL GT2),8,far,1,1.5.2-far-intel-1,2.5,6.9,58,76,69,63,56,,411,,
+A-first-series,1.5.2,0,Mesa Intel(R) UHD Graphics 620 (KBL GT2),8,far,1,1.5.2-far-intel-2,4.0,8.5,51,75,76,58,49,,411,,
+A-first-series,1.5.2,1,"AMD Radeon 500 Series (radeonsi, polaris12, ACO, DRM 3.61, 6.12.113+deb13-amd64)",8,far,1,1.5.2-far-amd-1,2.9,7.1,63,104,96,81,78,,410,44,
+A-first-series,1.5.2,1,"AMD Radeon 500 Series (radeonsi, polaris12, ACO, DRM 3.61, 6.12.113+deb13-amd64)",8,far,1,1.5.2-far-amd-2,2.8,7.4,54,94,79,43,72,,410,47,
+A-first-series,1.5.2,0,Mesa Intel(R) UHD Graphics 620 (KBL GT2),8,normal,1,1.5.2-normal-intel,4.5,9.7,41,84,87,58,71,,410,,
+A-first-series,1.5.2,1,"AMD Radeon 500 Series (radeonsi, polaris12, ACO, DRM 3.61, 6.12.113+deb13-amd64)",8,normal,1,1.5.2-normal-amd,3.2,7.7,61,97,91,67,85,,405,32,
+B-far-cross-version,1.5.2,0,Mesa Intel(R) UHD Graphics 620 (KBL GT2),8,far,1,1.5.2-t-far-intel,4.0,9.8,32,55,53,43,35,,411,,1.8
+B-far-cross-version,1.5.2,1,"AMD Radeon 500 Series (radeonsi, polaris12, ACO, DRM 3.61, 6.12.113+deb13-amd64)",8,far,1,1.5.2-t-far-amd,3.6,9.1,37,76,65,53,56,,410,28,1.9
+B-far-cross-version,1.8.9,0,Mesa Intel(R) UHD Graphics 620 (KBL GT2),8,far,1,1.8.9-far-intel-1,6.9,12.4,102,57,36,32,15,3,526,,3.2
+B-far-cross-version,1.8.9,0,Mesa Intel(R) UHD Graphics 620 (KBL GT2),8,far,1,1.8.9-far-intel-2,10.8,16.9,77,57,38,31,13,3,490,,3.2
+B-far-cross-version,1.8.9,1,"AMD Radeon 500 Series (radeonsi, polaris12, ACO, DRM 3.61, 6.12.113+deb13-amd64)",8,far,1,1.8.9-far-amd-1,7.6,13.9,75,67,56,40,16,3,512,25,3.4
+B-far-cross-version,1.8.9,1,"AMD Radeon 500 Series (radeonsi, polaris12, ACO, DRM 3.61, 6.12.113+deb13-amd64)",8,far,1,1.8.9-far-amd-2,8.3,15.5,75,60,47,32,15,3,503,23,3.3
+B-far-cross-version,1.8.9,0,Mesa Intel(R) UHD Graphics 620 (KBL GT2),8,normal,1,1.8.9-normal-intel,10.8,16.3,42,84,93,55,43,27,407,,2.6
+B-far-cross-version,1.8.9,1,"AMD Radeon 500 Series (radeonsi, polaris12, ACO, DRM 3.61, 6.12.113+deb13-amd64)",8,normal,1,1.8.9-normal-amd,8.4,16.3,36,117,124,58,5,24,394,27,2.7
+C-paired-normal,1.5.2,0,Mesa Intel(R) UHD Graphics 620 (KBL GT2),8,normal,1,1.5.2-p-normal-intel,3.7,8.8,39,69,68,56,58,,410,,2.0
+C-paired-normal,1.5.2,1,"AMD Radeon 500 Series (radeonsi, polaris12, ACO, DRM 3.61, 6.12.113+deb13-amd64)",8,normal,1,1.5.2-p-normal-amd,3.8,9.8,34,76,71,58,63,,408,32,2.1
+C-paired-normal,1.8.9,0,Mesa Intel(R) UHD Graphics 620 (KBL GT2),8,normal,1,1.8.9-p-normal-intel,8.7,15.3,40,81,91,52,6,27,403,,2.7
+C-paired-normal,1.8.9,1,"AMD Radeon 500 Series (radeonsi, polaris12, ACO, DRM 3.61, 6.12.113+deb13-amd64)",8,normal,1,1.8.9-p-normal-amd,11.4,17.0,36,107,120,60,5,24,390,26,2.9
