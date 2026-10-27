@@ -1,3 +1,4 @@
+import bench.ThreadCpu;
 import java.lang.reflect.Field;
 import java.util.Map;
 
@@ -79,7 +80,7 @@ public class Bench {
                         }
                         mc.a(new Runnable() { public void run() { lockWindow(); } });
                         String d = String.valueOf(dbg.get(mc));
-                        java.util.regex.Matcher cm = java.util.regex.Pattern.compile("\\((\\d+) chunk update").matcher(d);
+                        java.util.regex.Matcher cm = java.util.regex.Pattern.compile("(\\d+) chunk update").matcher(d);
                         int cu = cm.find() ? Integer.parseInt(cm.group(1)) : -1;
                         log(String.format("SAMPLE fps=%d debug=\"%d fps, %d chunk updates\" inWorld=%b heapMB=%d win=%dx%d pos=%s",
                                 fps.getInt(null), fps.getInt(null), cu, inWorld, (rt.totalMemory() - rt.freeMemory()) >> 20,

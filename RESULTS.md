@@ -5,16 +5,72 @@ Standard protocol (`suite.sh`): Normal view distance, 854×480, unlimited FPS, 9
 FPS = in-game F3 counter, mean of the last 30 s; repeats combined by median.
 See each submission's `system.md` for the full test system and notes on background load.
 
+## Minecraft b1.7.3
+
+| Submission | CPU | GPU | FPS Java 8 | FPS Java 21 | World creation, Java 8 (s) | CPU cores (Java 8 → Java 21) | Runs |
+| --- | --- | --- | ---: | ---: | ---: | --- | ---: |
+| [thinkpad-e480-i7-8550u-rx550](results/thinkpad-e480-i7-8550u-rx550/system.md) | Intel Core i7-8550U @ 1.80GHz | AMD Radeon 500 Series | 180 | 185 | 5.8 | 1.4 → 1.4 | 2 |
+| [thinkpad-e480-i7-8550u-rx550](results/thinkpad-e480-i7-8550u-rx550/system.md) | Intel Core i7-8550U @ 1.80GHz | Intel UHD Graphics 620 | 107 | 98 | 5.4 | 1.2 → 1.2 | 2 |
+
+## Minecraft 1.2.5
+
+| Submission | CPU | GPU | FPS Java 8 | FPS Java 21 | World creation, Java 8 (s) | CPU cores (Java 8 → Java 21) | Runs |
+| --- | --- | --- | ---: | ---: | ---: | --- | ---: |
+| [thinkpad-e480-i7-8550u-rx550](results/thinkpad-e480-i7-8550u-rx550/system.md) | Intel Core i7-8550U @ 1.80GHz | AMD Radeon 500 Series | 78 | 75 | 8.3 | 1.4 → 1.4 | 2 |
+| [thinkpad-e480-i7-8550u-rx550](results/thinkpad-e480-i7-8550u-rx550/system.md) | Intel Core i7-8550U @ 1.80GHz | Intel UHD Graphics 620 | 51 | 49 | 10.6 | 1.4 → 1.3 | 2 |
+
 ## Minecraft 1.5.2
 
-| Submission | CPU | GPU | FPS Java 8 | FPS Java 21 | World creation, Java 8 (s) | CPU cores Java 8 → 21 | Runs |
+| Submission | CPU | GPU | FPS Java 8 | FPS Java 21 | World creation, Java 8 (s) | CPU cores (Java 8 → Java 21) | Runs |
 | --- | --- | --- | ---: | ---: | ---: | --- | ---: |
-| [thinkpad-e480-i7-8550u-rx550](results/thinkpad-e480-i7-8550u-rx550/system.md) | Intel Core i7-8550U @ 1.80GHz | AMD Radeon 500 Series | 79 | 76 | 10.6 | 2.0 → 1.8 | 2 |
-| [thinkpad-e480-i7-8550u-rx550](results/thinkpad-e480-i7-8550u-rx550/system.md) | Intel Core i7-8550U @ 1.80GHz | Mesa Intel(R) UHD Graphics 620 | 62 | 69 | 11.2 | 1.9 → 1.7 | 2 |
+| [thinkpad-e480-i7-8550u-rx550](results/thinkpad-e480-i7-8550u-rx550/system.md) | Intel Core i7-8550U @ 1.80GHz | AMD Radeon 500 Series | 93 | 85 | 8.9 | 2.0 → 1.8 | 2 |
+| [thinkpad-e480-i7-8550u-rx550](results/thinkpad-e480-i7-8550u-rx550/system.md) | Intel Core i7-8550U @ 1.80GHz | Intel UHD Graphics 620 | 90 | 85 | 9.7 | 1.8 → 1.6 | 2 |
+
+## Minecraft 1.7.10
+
+| Submission | CPU | GPU | FPS Java 8 | FPS Java 21 | World creation, Java 8 (s) | CPU cores (Java 8 → Java 21) | Runs |
+| --- | --- | --- | ---: | ---: | ---: | --- | ---: |
+| [thinkpad-e480-i7-8550u-rx550](results/thinkpad-e480-i7-8550u-rx550/system.md) | Intel Core i7-8550U @ 1.80GHz | AMD Radeon 500 Series | 143 | 146 | 13.1 | 2.1 → 2.0 | 2 |
+| [thinkpad-e480-i7-8550u-rx550](results/thinkpad-e480-i7-8550u-rx550/system.md) | Intel Core i7-8550U @ 1.80GHz | Intel UHD Graphics 620 | 101 | 110 | 9.9 | 1.9 → 1.7 | 2 |
 
 ## Minecraft 1.8.9
 
-| Submission | CPU | GPU | FPS Java 8 | FPS Java 21 | World creation, Java 8 (s) | CPU cores Java 8 → 21 | Runs |
+| Submission | CPU | GPU | FPS Java 8 | FPS Java 21 | World creation, Java 8 (s) | CPU cores (Java 8 → Java 21) | Runs |
 | --- | --- | --- | ---: | ---: | ---: | --- | ---: |
-| [thinkpad-e480-i7-8550u-rx550](results/thinkpad-e480-i7-8550u-rx550/system.md) | Intel Core i7-8550U @ 1.80GHz | AMD Radeon 500 Series | 100 | 125 | 18.4 | 2.9 → 2.2 | 2 |
-| [thinkpad-e480-i7-8550u-rx550](results/thinkpad-e480-i7-8550u-rx550/system.md) | Intel Core i7-8550U @ 1.80GHz | Mesa Intel(R) UHD Graphics 620 | 97 | 94 | 13.6 | 2.7 → 1.9 | 2 |
+| [thinkpad-e480-i7-8550u-rx550](results/thinkpad-e480-i7-8550u-rx550/system.md) | Intel Core i7-8550U @ 1.80GHz | AMD Radeon 500 Series | 116 | 136 | 17.2 | 2.9 → 2.1 | 2 |
+| [thinkpad-e480-i7-8550u-rx550](results/thinkpad-e480-i7-8550u-rx550/system.md) | Intel Core i7-8550U @ 1.80GHz | Intel UHD Graphics 620 | 113 | 119 | 12.6 | 2.6 → 2.0 | 2 |
+
+## Minecraft 1.12.2
+
+| Submission | CPU | GPU | FPS Java 8 | FPS Java 21 | World creation, Java 8 (s) | CPU cores (Java 8 → Java 21) | Runs |
+| --- | --- | --- | ---: | ---: | ---: | --- | ---: |
+| [thinkpad-e480-i7-8550u-rx550](results/thinkpad-e480-i7-8550u-rx550/system.md) | Intel Core i7-8550U @ 1.80GHz | Intel UHD Graphics 620 | 146 | 147 | 18.5 | 2.4 → 2.0 | 2 |
+| [thinkpad-e480-i7-8550u-rx550](results/thinkpad-e480-i7-8550u-rx550/system.md) | Intel Core i7-8550U @ 1.80GHz | AMD Radeon 500 Series | 128 | 137 | 24.6 | 3.0 → 2.2 | 2 |
+
+## Minecraft 1.14.4
+
+| Submission | CPU | GPU | FPS Java 8 | FPS Java 21 | World creation, Java 8 (s) | CPU cores (Java 8 → Java 21) | Runs |
+| --- | --- | --- | ---: | ---: | ---: | --- | ---: |
+| [thinkpad-e480-i7-8550u-rx550](results/thinkpad-e480-i7-8550u-rx550/system.md) | Intel Core i7-8550U @ 1.80GHz | AMD Radeon 500 Series | 294 | 253 | 52.6 | 2.9 → 2.5 | 2 |
+| [thinkpad-e480-i7-8550u-rx550](results/thinkpad-e480-i7-8550u-rx550/system.md) | Intel Core i7-8550U @ 1.80GHz | Intel UHD Graphics 620 | 217 | 224 | 38.2 | 2.6 → 2.2 | 2 |
+
+## Minecraft 1.16.5
+
+| Submission | CPU | GPU | FPS Java 8 | FPS Java 21 | World creation, Java 8 (s) | CPU cores (Java 8 → Java 21) | Runs |
+| --- | --- | --- | ---: | ---: | ---: | --- | ---: |
+| [thinkpad-e480-i7-8550u-rx550](results/thinkpad-e480-i7-8550u-rx550/system.md) | Intel Core i7-8550U @ 1.80GHz | AMD Radeon 500 Series | 191 | 199 | 74.1 | 3.1 → 2.7 | 2 |
+| [thinkpad-e480-i7-8550u-rx550](results/thinkpad-e480-i7-8550u-rx550/system.md) | Intel Core i7-8550U @ 1.80GHz | Intel UHD Graphics 620 | 158 | 143 | 68.9 | 2.5 → 2.2 | 2 |
+
+## Minecraft 1.18.2
+
+| Submission | CPU | GPU | FPS Java 17 | FPS Java 21 | World creation, Java 17 (s) | CPU cores (Java 17 → Java 21) | Runs |
+| --- | --- | --- | ---: | ---: | ---: | --- | ---: |
+| [thinkpad-e480-i7-8550u-rx550](results/thinkpad-e480-i7-8550u-rx550/system.md) | Intel Core i7-8550U @ 1.80GHz | AMD Radeon 500 Series | 120 | 137 | 146.4 | 3.1 → 3.0 | 2 |
+| [thinkpad-e480-i7-8550u-rx550](results/thinkpad-e480-i7-8550u-rx550/system.md) | Intel Core i7-8550U @ 1.80GHz | Intel UHD Graphics 620 | 97 | 84 | 135.4 | 2.6 → 2.6 | 2 |
+
+## Minecraft 26.3
+
+| Submission | CPU | GPU | FPS Java 25 · opengl | FPS Java 25 · vulkan | World creation, Java 25 · opengl (s) | CPU cores (Java 25 · opengl → Java 25 · vulkan) | Runs |
+| --- | --- | --- | ---: | ---: | ---: | --- | ---: |
+| [thinkpad-e480-i7-8550u-rx550](results/thinkpad-e480-i7-8550u-rx550/system.md) | Intel Core i7-8550U @ 1.80GHz | AMD Radeon 500 Series | 47 | 44 | 20.3 | 6.1 → 6.0 | 2 |
+| [thinkpad-e480-i7-8550u-rx550](results/thinkpad-e480-i7-8550u-rx550/system.md) | Intel Core i7-8550U @ 1.80GHz | Intel UHD Graphics 620 | 28 | 28 | 21.6 | 6.0 → 5.3 | 2 |

@@ -18,7 +18,7 @@ import analyze  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SUMMARY_COLS = ["version", "gpu_prime", "gpu_renderer", "java", "view", "repeat", "run", "title_s", "create_world_s",
+SUMMARY_COLS = ["version", "gpu_prime", "gpu_renderer", "java", "variant", "backend", "view", "repeat", "run", "title_s", "create_world_s",
                 "fps_first10", "fps_avg_after10", "fps_last30", "fps_p5", "chunk_updates_per_s", "chunks_settled_s",
                 "max_heap_mb", "amd_busy_pct", "cpu_cores"]
 
@@ -102,26 +102,34 @@ def main():
                 continue
             prime = m.get("prime", "")
             renderers[prime] = m.get("gl_renderer", "") or "?"
+            # 26.x reports the backend and device it actually used (a Vulkan run is not described by glxinfo)
+            renderer = m.get("device") or renderers[prime]
             javas.add(m.get("java_version", ""))
             rep = re.search(r"-r(\d+)$", m.get("label", ""))
             # gpu_busy_percent is read from the amdgpu card; it only describes the run when that card rendered it
-            amd_run = re.search(r"AMD|Radeon|radeonsi", renderers[prime], re.I) is not None
-            ws.writerow([m.get("version"), prime, renderers[prime], m.get("java"), m.get("view"), rep.group(1) if rep else "",
+            amd_run = re.search(r"AMD|Radeon|radeonsi", renderer, re.I) is not None
+            ws.writerow([m.get("version"), prime, renderer, m.get("java"), m.get("variant", "default"),
+                         (m.get("backend") or "OpenGL").lower(), m.get("view"), rep.group(1) if rep else "",
                          r["run"], f"{r['title']:.1f}", f"{r['create']:.1f}", f"{r['first10']:.0f}", f"{r['avg']:.0f}",
-                         f"{r['last30']:.0f}", r["p5"], f"{r['chunk_updates']:.0f}",
+                         f"{r['last30']:.0f}", r["p5"], "" if r["chunk_updates"] is None else f"{r['chunk_updates']:.0f}",
                          "" if r["settled"] is None else r["settled"], r["heap_mb"],
                          "" if r["amd_busy"] is None or not amd_run else f"{r['amd_busy']:.0f}",
                          "" if r["cores"] is None else r["cores"]])
             t0 = None
-            for s in re.finditer(r'\[BENCH\s+([\d,.]+)\] SAMPLE fps=(\d+) debug="\d+ fps, (-?\d+) chunk updates".*?heapMB=(\d+)',
+            for s in re.finditer(r'\[BENCH\s+([\d,.]+)\] SAMPLE fps=(-?\d+) debug="-?\d+ fps, (-?\d+) chunk updates".*?heapMB=(\d+)',
                                  open(p).read()):
                 ts = float(s.group(1).replace(",", "."))
                 t0 = ts if t0 is None else t0
                 wp.writerow([r["run"], f"{ts - t0:.0f}", s.group(2), s.group(3), s.group(4)])
             if r["threads"]:
-                ft.write(f"== {r['run']} (DRI_PRIME {prime}, Java {m.get('java')}) total {r['cores']} cores\n{r['threads']}\n\n")
-    with open(os.path.join(out, "system.md"), "w") as f:
-        f.write(system_md(renderers, javas))
+                threads = re.sub(r"(\d),(\d)", r"\1.\2", r["threads"])  # logs from before run.sh pinned the locale
+                ft.write(f"== {r['run']} (DRI_PRIME {prime}, Java {m.get('java')}, {m.get('variant', 'default')}) total {r['cores']} cores\n{threads}\n\n")
+    md, path = system_md(renderers, javas), os.path.join(out, "system.md")
+    old = open(path).read() if os.path.exists(path) else ""
+    if "## Notes" in old:  # --force: keep the notes written by hand
+        md = md[:md.index("## Notes")] + "## Notes" + old.split("## Notes", 1)[1]
+    with open(path, "w") as f:
+        f.write(md)
     print(f"wrote {out}: system.md, summary.csv, samples.csv, threads.txt - review system.md, fill in the notes")
 
 

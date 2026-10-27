@@ -15,10 +15,12 @@ Collected by tools/export.py. Edit the notes below by hand.
 | Session | wayland / KDE |
 | CPU governor | powersave |
 | On AC power | 1 |
-| Java | openjdk version "1.8.0_504" (Temurin)<br>openjdk version "21.0.13" 2026-10-20 LTS (Temurin) |
+| Java | openjdk version "1.8.0_504"<br>openjdk version "17.0.21" 2026-10-20<br>openjdk version "21.0.13" 2026-10-20 LTS<br>openjdk version "25.0.5" 2026-10-20 LTS |
 
 ## Notes
 
-- Background load during the runs (browser, remote desktop, ...): RustDesk (~30% CPU) and Firefox were running; load average ~6. The same 1.5.2 test drifted ~25% slower over an hour, so only runs taken back to back are compared.
-- Anything unusual (thermal throttling, laptop on battery, ...): CPU around 80 °C. Runs were made before suite.sh existed, with the same harness, settings and back-to-back order (Java 8 then 21 per version and GPU). The display is wired to the Intel iGPU; the RX 550 has no outputs (muxless PRIME).
-- `extra/`: earlier series (Far view distance, 1.5.2 vs 1.8.9 pairs) described in the main README.
+- Background load during the runs (browser, remote desktop, ...): RustDesk (~30% of one core) and Firefox (~15–25%) were running the whole time; load average 3–5 between runs. One run per combination, so treat differences under ~15% as noise.
+- Anything unusual (thermal throttling, laptop on battery, ...): on AC, governor `powersave`, CPU at 65–80 °C. The display is wired to the Intel iGPU; the RX 550 has no outputs (muxless PRIME), so every RX 550 frame is copied to the iGPU.
+- Run order: `GPUS="0 1" ./suite.sh` on 2026-10-27 between 03:25 and 05:02 local time. Ten runs were made again later the same morning after harness fixes, back to back within their version: 1.18.2 on the Intel GPU (the Java 17 run crashed in the harness's off-thread read of the chunk statistics), all four 26.3 runs (the default `inactivityFpsLimit:"afk"` capped FPS at 30), and all four b1.7.3 runs (its loop sleeps 10 ms a frame while the window has no focus).
+- 26.3: both graphics backends ran on the GPU picked by DRI_PRIME (checked in each run's `Using graphics device` line). The OpenGL backend needs `SDL_VIDEO_FORCE_EGL=1` on X11/XWayland (set in `versions/26.3/version.env`).
+- `extra/`: earlier series on 1.5.2 and 1.8.9 (Far view distance, pairs), taken before `suite.sh` existed with a 1 GB heap and without the Java 8/21 interleaving; not comparable to the main table.
